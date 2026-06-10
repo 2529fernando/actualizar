@@ -1,79 +1,166 @@
-<div style="
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2529Stream - Descarga</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
     background:#000;
     color:#fff;
-    padding:40px 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
     text-align:center;
-    font-family:Arial, sans-serif;
-    border-radius:15px;
-">
+}
 
-    <h1 style="
-        margin-bottom:10px;
-        color:#00d4ff;
-        font-size:32px;
-    ">
-        2529Stream
-    </h1>
+.logo{
+    font-size:clamp(32px,6vw,60px);
+    font-weight:bold;
+    color:#00d4ff;
+    margin-bottom:10px;
+}
 
-    <p style="
-        font-size:18px;
-        color:#ccc;
-        margin-bottom:35px;
-    ">
-        Descarga la última versión de la aplicación Android
-    </p>
+.subtitle{
+    color:#bdbdbd;
+    font-size:clamp(15px,2vw,20px);
+    margin-bottom:40px;
+}
 
-    <div style="
-        max-width:500px;
-        margin:auto;
-        background:#111;
-        padding:25px;
-        border-radius:15px;
-        margin-bottom:20px;
-        border:1px solid #222;
-    ">
-        <h2 style="color:#00d4ff;">Opción 1</h2>
-        <p style="color:#aaa;">Servidor principal</p>
+.card{
+    background:#111;
+    border:1px solid #222;
+    border-radius:16px;
+    padding:30px;
+    margin-bottom:25px;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
 
-        <a href="https://pub-c3bf2eb8376644b1aee866cb2aeae27a.r2.dev/2529stream/app-debug.apk"
-           style="
-            display:inline-block;
-            background:#00d4ff;
-            color:#000;
-            text-decoration:none;
-            padding:15px 35px;
-            border-radius:10px;
-            font-weight:bold;
-            font-size:18px;
-           ">
-            📥 Descargar APK
+.card h2{
+    color:#00d4ff;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#bdbdbd;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    font-weight:bold;
+    padding:15px 35px;
+    border-radius:10px;
+    transition:all .3s ease;
+    font-size:18px;
+}
+
+.btn-primary{
+    background:#00d4ff;
+    color:#000;
+}
+
+.btn-secondary{
+    background:#2b2b2b;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:30px;
+    color:#666;
+    font-size:14px;
+}
+
+@media (max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:320px;
+        font-size:16px;
+    }
+}
+
+@media (max-width:480px){
+
+    .logo{
+        font-size:34px;
+    }
+
+    .subtitle{
+        font-size:15px;
+    }
+
+    .card{
+        padding:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">2529Stream</div>
+
+    <div class="subtitle">
+        Descarga la última versión de 2529Stream para Android
+    </div>
+
+    <div class="card">
+        <h2>Opción 1</h2>
+        <p>Servidor principal (más rápido)</p>
+
+        <a class="btn btn-primary"
+           href="https://pub-c3bf2eb8376644b1aee866cb2aeae27a.r2.dev/2529stream/app-debug.apk">
+           📥 Descargar APK
         </a>
     </div>
 
-    <div style="
-        max-width:500px;
-        margin:auto;
-        background:#111;
-        padding:25px;
-        border-radius:15px;
-        border:1px solid #222;
-    ">
-        <h2 style="color:#00d4ff;">Opción 2</h2>
-        <p style="color:#aaa;">Servidor alternativo</p>
+    <div class="card">
+        <h2>Opción 2</h2>
+        <p>Servidor alternativo</p>
 
-        <a href="https://raw.githubusercontent.com/2529fernando/Stream2529/refs/heads/master/app/build/outputs/apk/debug/app-debug.apk"
-           style="
-            display:inline-block;
-            background:#333;
-            color:#fff;
-            text-decoration:none;
-            padding:15px 35px;
-            border-radius:10px;
-            font-weight:bold;
-            font-size:18px;
-           ">
-            📥 Descargar APK
+        <a class="btn btn-secondary"
+           href="https://raw.githubusercontent.com/2529fernando/Stream2529/refs/heads/master/app/build/outputs/apk/debug/app-debug.apk">
+           📥 Descargar APK
         </a>
+    </div>
+
+    <div class="footer">
+        © 2026 2529Stream
     </div>
 
 </div>
+
+</body>
+</html>
